@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "k8s-todo-api", "k8s-todo-api\k8s-todo-api.csproj", "{8C6BA854-E340-402F-8C7A-793737A8A991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "k8s-todo-web", "k8s-todo-web\k8s-todo-web.csproj", "{E3B1ADF6-AA2F-42FB-A2A4-18C5110296DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C6BA854-E340-402F-8C7A-793737A8A991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6BA854-E340-402F-8C7A-793737A8A991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6BA854-E340-402F-8C7A-793737A8A991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6BA854-E340-402F-8C7A-793737A8A991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B1ADF6-AA2F-42FB-A2A4-18C5110296DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B1ADF6-AA2F-42FB-A2A4-18C5110296DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B1ADF6-AA2F-42FB-A2A4-18C5110296DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B1ADF6-AA2F-42FB-A2A4-18C5110296DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

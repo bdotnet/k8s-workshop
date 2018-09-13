@@ -61,10 +61,10 @@ spec:
         - name: ASPNETCORE_ENVIRONMENT
           valueFrom:
             configMapKeyRef:
-              name: todolist-configmap
+              name: k8s-todo-configmap
               key: aspNetCoreEnvironment
         - name: TodoApiService__EndpointUri
           valueFrom:
             configMapKeyRef:
-              name: todolist-configmap
+              name: k8s-todo-configmap
               key: todoApiServiceEndpointUri

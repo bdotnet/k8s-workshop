@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  todoapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000"
+
+  todoweb:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - TodoApiService__EndpointUri=todoapi:5000
+    ports:
+      - "3000"

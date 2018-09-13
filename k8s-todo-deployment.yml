@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapi
+  labels:
+    app: todoapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todoapi
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: todoapi
+    spec:
+      containers:
+      - name: todoapi
+        image: wannabeegeek/k8s-todo-api:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: k8s-todo-configmap
+              key: aspNetCoreEnvironment
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoweb
+  labels:
+    app: todoweb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todoweb
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5 
+  template:
+    metadata:
+      labels:
+        app: todoweb
+    spec:
+      containers:
+      - name: todoweb
+        image: wannabeegeek/k8s-todo-web:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: todolist-configmap
+              key: aspNetCoreEnvironment
+        - name: TodoApiService__EndpointUri
+          valueFrom:
+            configMapKeyRef:
+              name: todolist-configmap
+              key: todoApiServiceEndpointUri

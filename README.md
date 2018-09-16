@@ -1,6 +1,14 @@
 # k8s-workshop
 
-Basic Todo application with ASP.NET Core 2.1 Razor Pages as Front end & ASP.NET Core 2.1 WEB API as backend
+## Presentation
+
+The presentation used in the workshop is available [here](https://www.slideshare.net/MohitChhabra1/containerization-in-microsoft-azure)
+
+## Demo Application
+
+Basic Todo application with ASP.NET Core 2.1 Razor Pages as Front end & ASP.NET Core 2.1 WEB API as backend. 
+
+This slimmed down version has its inspiration from the full blown application : https://github.com/paolosalvatori/service-fabric-acs-kubernetes-multi-container-app 
 
 Built using Visual Studio for Mac and Visual Studio Code. Container images are created using Docker for Mac. Application was tested against minikube running within a Mac machine. All the below mentioned steps should work everywhere irrespective of Windows/Linux/Mac.
 
